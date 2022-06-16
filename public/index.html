@@ -3,35 +3,149 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+      <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body class="app">
+        <header class="header">
+            <img src="%PUBLIC_URL%/images/dots.png"  width="27" height="5" />
+            <a href="#" class="header_logo link">
+                <img src="%PUBLIC_URL%/images/logo.png" alt="Логотип" width="32" height="32" />
+                <h1 class="hearer_title">Spotify</h1>
+            </a>
+            <input type="search" class="header_search" placeholder="Исполнитель, трек, или подкаст">
+            <nav class="header_navigation">
+                <a href="/" class="link">Home</a>
+                <a href="/" class="link">Radio</a>
+            </nav>
+        </header>
+        <aside class="accordion">
+            <ul class="aside_menus">
+                <li class="menu home"> <img src="%PUBLIC_URL%/images/home.png" width="16" height="16"> Home</li>
+                <li class="menu"> <img src="%PUBLIC_URL%/images/search.png" width="16" height="16"> Browse</li>
+                <li class="menu"> <img src="%PUBLIC_URL%/images/media.png" width="16" height="16"> Radio</li>
+                <br>
+                <li class="menu-lib">Your library</li>
+            </ul>
+            <ul class="aside_offers">
+                <li class="offer">Made for you</li>
+                <li class="offer">Recently played</li>
+                <li class="offer">Linked songs</li>
+                <li class="offer">Albums</li>
+                <li class="offer">Artists</li>
+                <li class="offer">Podcasts</li>
+                <hr class="hr_color">
+                <li class="offer">New Playlist</li>
+                <hr class="hr_color">
+            </ul>
+            <a href=/><img class="recommended-artist" src="%PUBLIC_URL%/images/artist.jpg"></a>
+        </aside>
+        <main class="content">
+            <div class="album">
+                <img class="album_pic" src="%PUBLIC_URL%/images/album_pic.jpg" align="top">
+                <ul class="album_info">
+                    <li class="album_made_for"> MADE FOR LUAN</li>
+                    <li class="album_mix"> Daily Mix 1</li>
+                    <li class="album_description"> Your favourite music.</li>
+                    <li class="album_description"> Featuring Son Tung M-TP, Vu, Tien Tien and more.</li>
+                    <br>
+                    <li class="album_description"> Made for Luan Nguyen by Spotify · Endless Mix</li>
+                    <li class="track_musician">
+                        <a href="/"><div class="play_button">Play</div></a>
+                        <a href="/"><span class="button_more">...</span></a>
+                    </li>
+                    </ul>
+            </div>
+            <div class="tracks">
+                <ul class="tracks_list">
+                    <li class="track_top">Title</li>
+                    <hr class="hr_color">
+                    <li class="track">Intro: Sau 03 Nam</li>
+                    <li class="track">Bai Check</li>
+                    <li class="track">Em Dao</li>
+                    <li class="track">Tha Vao</li>
+                    <li class="track_green">Tim (Lost)</li>
+                    <li class="track">Mot The Goi</li>
+                    <li class="track">Pho Jon</li>
+                    <li class="track">Tinh Yen</li>
+                    <li class="track">Color</li>
+                    <li class="track">Red Dot</li>
+                    <li class="track">TTT</li>
+                </ul>
+                <ul class="tracks_list">
+                    <li class="track_top">Artist</li>
+                    <hr class="hr_color">
+                    <li class="track">Me</li>
+                    <li class="track">AGAJo</li>
+                    <li class="track">Yepro</li>
+                    <li class="track">All</li>
+                    <li class="track_green">Min, Mr A</li>
+                    <li class="track">Cody Ten</li>
+                    <li class="track">Bali</li>
+                    <li class="track">Teeek</li>
+                    <li class="track">Greendy</li>
+                    <li class="track">Walery</li>
+                    <li class="track">TOT SAMIY</li>
+                </ul>
+                <ul class="tracks_list">
+                    <li class="track_top">Album</li>
+                    <hr class="hr_color">
+                    <li class="track">First</li>
+                    <li class="track">Second</li>
+                    <li class="track">New</li>
+                    <li class="track">He</li>
+                    <li class="track_green">She</li>
+                    <li class="track">Who</li>
+                    <li class="track">It</li>
+                    <li class="track">Old</li>
+                    <li class="track">Him</li>
+                    <li class="track">Them</li>
+                    <li class="track">Nobody</li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer">
+           <div class="footer_cover">
+                    <ul class="footer_track">
+                        <li class="track_name"> Tim (Lost) [feat. Mr. A.]</li>
+                        <li class="track_musician"> Min, Mr A</li>
+                    </ul>
+               <img class="like_button" src="%PUBLIC_URL%/images/like.png" width="16" height="16">
+           </div>
+            <div>
+                <ul class="footer_buttons">
+                    <li class="footer_play">
+                        <img class="footer_button" src="%PUBLIC_URL%/images/shuffle.png" width="20px" height="20px">
+                        <img class="footer_button" src="%PUBLIC_URL%/images/play-back.png" width="20px" height="20px">
+                        <img class="footer_button" src="%PUBLIC_URL%/images/play-button.png" width="25px" height="25px">
+                        <img class="footer_button" src="%PUBLIC_URL%/images/play-forward.png" width="20px" height="20px">
+                        <img class="footer_button" src="%PUBLIC_URL%/images/replay.png" width="20px" height="20px">
+                    </li>
+                    <li class="footer_timecode">
+                        <div>
+                            <span class="footer_time">2:34</span>
+                            <img class="time" src="/images/time.png">
+                            <span class="footer_time">4:40</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_functions">
+                <img src="%PUBLIC_URL%/images/mic.png" class="footer_function" width="20px" height="20px">
+                <img src="%PUBLIC_URL%/images/list.png" class="footer_function" width="20px" height="20px">
+                <img src="%PUBLIC_URL%/images/devices.png" class="footer_function" width="20px" height="20px">
+                <img src="%PUBLIC_URL%/images/volume.png" class="footer_function" width="20px" height="20px">
+                <img src="%PUBLIC_URL%/images/volume1.png" class="footer_function" width="64px" height="20px">
+                <img src="%PUBLIC_URL%/images/open.png" class="footer_function" width="20px" height="20px">
+            </div>
+        </footer>
+    </body>
+    <script src="requests.js" type="module"></script>
 </html>
