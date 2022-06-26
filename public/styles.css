@@ -96,12 +96,9 @@
 
     .content{
         background: linear-gradient(0deg,#181818 50%,#3F3F3F 100%);
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:flex-start;
-        overflow-y:scroll;
-        padding-left: 40px;
-        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
     }
 
     .album{
@@ -109,8 +106,29 @@
         width: 100%;
     }
 
-    .album_pic{
-        align: top;
+    .card{
+        height: auto;
+        width: 200px;
+        background-color: wheat;
+        margin: 3%;
+        position: relative;
+    }
+
+    .card_image{
+        width: 100%;
+    }
+
+    .card_text{
+        padding: 10px;
+    }
+
+    .card_like{
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 2%;
+        left: 2%;
     }
 
     .album_info{
