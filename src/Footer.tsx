@@ -27,11 +27,11 @@ function Footer() {
             <div>
                 <ul className="footer_buttons">
                     <li className="footer_play">
-                        <img className="footer_button" src={shuffle} width="20px" height="20px"/>
-                        <img className="footer_button" src={playback} width="20px" height="20px"/>
-                        <img className="footer_button" src={playbutton} width="25px" height="25px"/>
-                        <img className="footer_button" src={playforward} width="20px" height="20px"/>
-                        <img className="footer_button" src={replay} width="20px" height="20px"/>
+                        <img className="footer_button" src={shuffle} width="20" height="20"/>
+                        <img className="footer_button" src={playback} width="20" height="20"/>
+                        <img className="footer_button" src={playbutton} width="25" height="25"/>
+                        <img className="footer_button" src={playforward} width="20" height="20"/>
+                        <img className="footer_button" src={replay} width="20" height="20"/>
                     </li>
                     <li className="footer_timecode">
                         <div>
@@ -43,12 +43,12 @@ function Footer() {
                 </ul>
             </div>
             <div className="footer_functions">
-                <img src={mic} className="footer_function" width="20px" height="20px"/>
-                <img src={list} className="footer_function" width="20px" height="20px"/>
-                <img src={devices} className="footer_function" width="20px" height="20px"/>
-                <img src={volume} className="footer_function" width="20px" height="20px"/>
-                <img src={volume1} className="footer_function" width="64px" height="20px"/>
-                <img src={open} className="footer_function" width="20px" height="20px"/>
+                <img src={mic} className="footer_function" width="20" height="20"/>
+                <img src={list} className="footer_function" width="20" height="20"/>
+                <img src={devices} className="footer_function" width="20" height="20"/>
+                <img src={volume} className="footer_function" width="20" height="20"/>
+                <img src={volume1} className="footer_function" width="64" height="20"/>
+                <img src={open} className="footer_function" width="20" height="20"/>
             </div>
         </footer>
     )

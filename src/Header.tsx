@@ -8,13 +8,13 @@ function Header() {
     const navigate = useNavigate();
     const [input, setInput] = useState('');
 
-    function onKeyPressHandler(e:any) {
+    function onKeyPressHandler(e:React.KeyboardEvent<HTMLInputElement>) {
         if (e.charCode === 13) {
             navigate(`/track_search?search=${input}`)
         }
     }
 
-    function EventHandler(e:any) {
+    function inputEventHandler(e:React.ChangeEvent<HTMLInputElement>) {
         setInput(e.target.value);
     }
 
@@ -25,7 +25,7 @@ function Header() {
                 <img src={logo} alt="Логотип" width="32" height="32"/>
                 <h1 className="hearer_title">Spotify</h1>
             </a>
-            <input type="search" className="header_search" value={input} onChange={e => EventHandler(e)} onKeyPress={e => onKeyPressHandler(e)} placeholder="Исполнитель, трек, или подкаст" />
+            <input type="search" className="header_search" value={input} onChange={e => inputEventHandler(e)} onKeyPress={e => onKeyPressHandler(e)} placeholder="Исполнитель, трек, или подкаст" />
                 <nav className="header_navigation">
                     <a href="/" className="link">Home</a>
                     <a href="/" className="link">Radio</a>

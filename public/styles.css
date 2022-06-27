@@ -8,7 +8,7 @@
         height: 100vh;
         grid-template-columns: 250px 1fr;
         grid-template-rows: min-content 1fr min-content;
-        font-family: Proxima Nova, Blooming Elegant Sans, Century Gothic, Tahoma, Geneva, sans-serif;
+        font-family: Century Gothic, sans-serif;
     }
 
     .header{
@@ -33,12 +33,9 @@
         color: #FFF;
     }
 
-    a:visited {
-        color: #FFF;
-    }
-
     .link{
         text-decoration: none;
+        color:#B5B5B5
     }
 
     .header_navigation{
