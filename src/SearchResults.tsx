@@ -2,14 +2,15 @@ import React, {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
 import {mapTracks} from "./requests";
 import TrackInfo from "./TrackInfo";
-import {ITrackInfo} from "./ITrackInfo";
+import {ITrackInfo, ITrackSearchList} from "./ITrackInfo";
 function SearchResults() {
 
     const [params] = useSearchParams();
+    const [tracks,setTracks] = useState<ITrackInfo[]>([]);
 
     useEffect(() => {
         if (params.get("search")) {
-            mapTracks(params.get("search")!).then((trackMatches:any) => {
+            mapTracks(params.get("search")!).then((trackMatches:ITrackSearchList) => {
                 if (trackMatches.results.trackmatches.track.length) {
                     setTracks(trackMatches.results.trackmatches.track)
                 }
@@ -20,14 +21,12 @@ function SearchResults() {
         }
     }, [params.get("search")]);
 
-    const [tracks,setTracks] = useState([]);
-
 
     return (
         <div className="content">
             {tracks.map((track:ITrackInfo) => {
                 return (
-                    <TrackInfo artist={track.artist} name={track.name} image={track.image[2]["#text"]}/>
+                    <TrackInfo key={track.listeners} artist={track.artist} name={track.name} image={track.image[2]["#text"]}/>
                 )
             })}
         </div>
